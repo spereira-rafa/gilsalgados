@@ -113,3 +113,39 @@
  .about-v2 .about-copy h2{font-size:32px}
  .about-v2 .about-gallery img{height:120px}
 }
+
+
+/* Identidade Gil Salgados: logo oficial do usuário, preservada sem filtros ou cortes. */
+header .brand-logo{
+  width:158px;height:108px;max-height:none;
+  object-fit:contain;mix-blend-mode:multiply;
+}
+header .header-inner{min-height:112px}
+.hero-seal .brand-logo{
+  width:min(100%,270px);height:auto;max-height:250px;
+  object-fit:contain;mix-blend-mode:multiply;
+}
+.footer-brand{
+  width:min(220px,100%);min-height:172px;
+  border-radius:24px;background:#fffaf2;
+  padding:10px;display:flex;align-items:center;justify-content:center;
+}
+.footer-brand .brand-logo{
+  width:100%;height:auto;max-height:175px;
+  object-fit:contain;filter:none;mix-blend-mode:multiply;
+}
+@media(min-width:701px) and (max-width:1100px){
+  header .brand-logo{width:137px;height:95px}
+  header .header-inner{min-height:98px}
+  .hero-seal .brand-logo{width:235px;height:auto;max-height:230px}
+  .footer-brand{width:180px;min-height:145px}
+  .footer-brand .brand-logo{width:100%;height:auto;max-height:140px}
+}
+@media(max-width:700px){
+  header .brand-logo{width:128px;height:88px}
+  header .header-inner{min-height:94px}
+  nav{top:94px}
+  .hero-seal .brand-logo{width:145px;height:auto;max-height:145px}
+  .footer-brand{width:185px;min-height:154px;margin:0 auto 8px;padding:8px}
+  .footer-brand .brand-logo{width:100%;height:auto;max-height:145px}
+}
