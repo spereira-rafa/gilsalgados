@@ -13,3 +13,7 @@
 .about{padding-block:24px;align-items:center}.about-copy>p{margin:12px 0;line-height:1.65}.about-copy .about-intro{color:var(--brown)}.about-copy h2{font-size:38px;gap:14px}.about-copy h2:after{width:50px;flex-shrink:0}.about-note{border-radius:24px;line-height:1.5}.about-note>span{flex-shrink:0;font-size:24px}.about-photo{height:100%;min-height:340px;max-height:540px}.photo-stack{align-self:center}.photo-stack img{height:175px}
 @media(min-width:701px) and (max-width:1100px){.about-copy h2{font-size:29px}.about-copy>p{font-size:12px;margin-block:10px}.about-copy h2:after{width:35px}.about-note{font-size:12px;padding:11px 13px}.about-photo{min-height:420px;max-height:550px}.photo-stack img{height:130px}}
 @media(max-width:700px){.about{padding-block:20px 26px}.about-photo{height:235px;min-height:0;max-height:none}.about-copy h2{font-size:32px;gap:14px}.about-copy h2:after{width:45px}.about-copy>p{font-size:13px;line-height:1.8;margin-block:14px}.about-note{padding:15px 17px;font-size:12px;border-radius:22px;gap:10px}}
+
+/* Portrait supplied by Gil: preserve face and chef hat in each viewport. */
+.about-photo>img{object-position:50% 0%}
+@media(max-width:700px){.about-photo{height:360px}}
