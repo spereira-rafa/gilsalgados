@@ -49,3 +49,67 @@
 @media(max-width:900px){.about.about-v2{grid-template-columns:minmax(0,40fr) minmax(0,60fr);gap:24px}.about-v2 .about-photo>img{max-height:520px}.about-v2 .about-gallery img{height:100px}}
 @media(max-width:700px){.about.about-v2{width:90%;grid-template-columns:1fr;gap:18px;padding-block:30px 40px}.about-v2 .about-photo{height:auto;min-height:0;max-width:430px;width:100%;margin:auto;border-radius:22px 22px 0 0}.about-v2 .about-photo>img{width:100%;max-height:440px}.about-v2 .about-copy{width:100%;margin:0}.about-v2 .about-copy h2{font-size:34px}.about-v2 .about-copy>p{font-size:14px}.about-v2 .about-gallery{max-width:none}.about-v2 .about-gallery img{height:120px}.about-v2 .about-cta{width:100%;padding:13px 12px;font-size:12px}}
 @media(prefers-reduced-motion:reduce){.about-v2 .about-cta{transition:none}}
+
+
+/* Gil Salgados 2.1 — acabamento visual validado por Matuzalem. */
+.about.about-v2{
+  grid-template-columns:minmax(0,43fr) minmax(0,57fr);
+  gap:clamp(16px,2.3vw,32px);
+  align-items:start;
+  padding-block:clamp(24px,3vw,40px);
+}
+.about-v2 .about-photo{
+  position:relative;
+  aspect-ratio:auto;
+  align-self:stretch;
+  border-radius:0;
+  background:radial-gradient(ellipse at 50% 85%,#fbf0e3 0%,#fff8ef 70%,#fff8ef 100%);
+}
+.about-v2 .about-photo>img{
+  position:relative;
+  inset:auto;
+  width:min(100%,480px);
+  height:auto;
+  max-height:630px;
+  object-fit:contain;
+  object-position:center bottom;
+  margin:0 auto;
+}
+.about-v2 .about-copy{
+  align-self:start;
+  padding-top:clamp(18px,3vw,45px);
+}
+.about-v2 .about-copy h2{
+  font-size:clamp(28px,2.85vw,38px);
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:7px 0 13px;
+}
+.about-v2 .about-heart{
+  font-family:Georgia,'Times New Roman',serif;
+  font-style:normal;
+  font-size:.68em;
+  color:#ca8a18;
+  line-height:1;
+}
+.about-v2 .about-signature{
+  margin:11px 0;
+  padding:8px 0 11px;
+}
+.about-v2 .about-gallery{margin:12px 0 15px;gap:12px}
+.about-v2 .about-gallery img{height:110px}
+.about-v2 .about-cta{margin-top:0}
+@media(min-width:701px) and (max-width:900px){
+ .about.about-v2{grid-template-columns:minmax(0,42fr) minmax(0,58fr);gap:18px}
+ .about-v2 .about-copy{padding-top:16px}
+ .about-v2 .about-gallery img{height:95px}
+}
+@media(max-width:700px){
+ .about.about-v2{width:90%;grid-template-columns:1fr;gap:16px;padding-block:24px 35px}
+ .about-v2 .about-photo{max-width:430px;width:100%;margin:auto;align-self:center}
+ .about-v2 .about-photo>img{max-height:445px}
+ .about-v2 .about-copy{width:100%;padding-top:0}
+ .about-v2 .about-copy h2{font-size:32px}
+ .about-v2 .about-gallery img{height:120px}
+}
