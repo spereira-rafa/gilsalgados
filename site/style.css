@@ -20,3 +20,7 @@
 /* Taller portrait framing shows Gil from the chef hat to the abdomen. */
 .about-photo{position:relative;aspect-ratio:2 / 3;height:auto;min-height:0;max-height:none;align-self:center}
 .about-photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0%}
+
+/* Updated portrait: full chef hat-to-abdomen framing on the page background. */
+.about-photo{aspect-ratio:3 / 4;border-radius:0}
+.about-photo>img{object-fit:contain;object-position:50% 100%}

@@ -38,3 +38,5 @@ Contatos confirmados: WhatsApp +55 71 98528-1777; Instagram @salgadosda.gil. Val
 A composição segue a referência visual fornecida: navegação compacta, marca completa na abertura, faixas de diferenciais e eventos, oito categorias do cardápio atual, seção sobre a marca e rodapé com ondas douradas. O orçamento abre em um diálogo, com fechamento por botão ou Escape e foco contido na janela.
 
 A pessoa e os depoimentos do modelo foram confirmados como exemplos. A seção sobre usa o retrato fornecido posteriormente pela usuária em `site/assets/GIL.png`, com seu texto de apresentação. Os cartões apresentam diferenciais da marca em vez de avaliações de exemplo.
+
+O retrato atualizado original está preservado em `site/assets/GIL.png`. A versão exibida em `gil-site.png` foi preparada a partir dele com remoção do fundo quadriculado, em PNG transparente. O enquadramento 3:4 mostra o chapéu até a região da barriga.
