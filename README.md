@@ -15,7 +15,7 @@ O servidor usa a porta 3000 e serve o site no caminho `/gilsalgados/`. A raiz re
 
 ## Orçamento para eventos
 
-O botão de orçamento leva a um formulário com nome, ocasião, quantidade de pessoas, data e preferências. Nome, ocasião e quantidade são obrigatórios. A data é opcional e não pode estar no passado, considerando o dia local do visitante. O formulário abre o WhatsApp com uma mensagem preenchida; o visitante revisa e envia. Não há armazenamento de dados no servidor, confirmação de reserva ou envio automático de mensagem.
+O botão de orçamento abre uma janela acessível com um formulário com nome, ocasião, quantidade de pessoas, data e preferências. Nome, ocasião e quantidade são obrigatórios. A data é opcional e não pode estar no passado, considerando o dia local do visitante. O formulário abre o WhatsApp com uma mensagem preenchida; o visitante revisa e envia. Não há armazenamento de dados no servidor, confirmação de reserva ou envio automático de mensagem.
 
 ## Fotografias originais
 
@@ -32,3 +32,9 @@ O arquivo `vercel.json` é destinado a um **novo projeto isolado**, com nome sug
 Se `/gilsalgados` precisar estar no domínio de um projeto Vercel já existente, será necessário identificar esse projeto e integrar apenas as rotas desse prefixo à configuração atual. Isso é diferente de criar um projeto separado. Preserve todas as outras rotas e configurações. Não associe nem substitua domínios existentes automaticamente.
 
 Contatos confirmados: WhatsApp +55 71 98528-1777; Instagram @salgadosda.gil. Valores e disponibilidade são tratados diretamente pelo WhatsApp; o site não inventa preços ou depoimentos.
+
+## Layout de referência
+
+A composição segue a referência visual fornecida: navegação compacta, marca completa na abertura, faixas de diferenciais e eventos, oito categorias do cardápio atual, seção sobre a marca e rodapé com ondas douradas. O orçamento abre em um diálogo, com fechamento por botão ou Escape e foco contido na janela.
+
+A pessoa e os depoimentos do modelo foram confirmados como exemplos; não são publicados como pessoa ou avaliações reais da empresa. A seção sobre usa fotos dos produtos e os cartões apresentam diferenciais da marca.

@@ -27,7 +27,10 @@ products.forEach(product => {
   const title = document.createElement('h3'); title.textContent = product.name;
   const description = document.createElement('p'); description.textContent = product.description;
   const cta = document.createElement('span'); cta.className = 'product-cta'; cta.textContent = 'Quero encomendar →';
-  body.append(title, cta); card.setAttribute('aria-label', `${product.name}: ${product.description} Encomendar pelo WhatsApp.`); card.append(media, body); grid.append(card);
+  const iconNames = {'salgados.png':'coxinha','finger-food.png':'cup','tortas.png':'pie','bolos.png':'cake','mini-hamburguer.png':'burger','lanches.png':'burger','torta-doce.png':'cake','pasteis-doces.png':'cup'};
+  const symbol = document.createElementNS('http://www.w3.org/2000/svg','svg'); symbol.classList.add('icon'); symbol.setAttribute('aria-hidden','true');
+  const use = document.createElementNS('http://www.w3.org/2000/svg','use'); use.setAttribute('href', `#icon-${iconNames[product.photo]}`); symbol.append(use);
+  body.append(symbol, title); card.setAttribute('aria-label', `${product.name}: ${product.description} Encomendar pelo WhatsApp.`); card.append(media, body); grid.append(card);
 });
 document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
   document.querySelectorAll('[data-filter]').forEach(item => { item.classList.toggle('selected', item === button); item.setAttribute('aria-pressed', String(item === button)); });
@@ -82,3 +85,40 @@ quoteForm.addEventListener('submit', event => {
 });
 quoteForm.elements.customer.addEventListener('input', () => quoteForm.elements.customer.setCustomValidity(''));
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+const quoteDialog = document.querySelector('#orcamento');
+let quoteTrigger;
+function openQuote(trigger) {
+  quoteTrigger = trigger;
+  if (!quoteDialog.open) quoteDialog.showModal();
+  document.body.classList.add('dialog-open');
+}
+document.querySelectorAll('a[href="#orcamento"]').forEach(link => link.addEventListener('click', event => {
+  event.preventDefault();
+  setMenuOpen(false);
+  openQuote(link);
+}));
+document.querySelector('.dialog-close').addEventListener('click', () => quoteDialog.close());
+quoteDialog.addEventListener('click', event => {
+  const bounds = quoteDialog.getBoundingClientRect();
+  if (event.target === quoteDialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) quoteDialog.close();
+});
+quoteDialog.addEventListener('close', () => {
+  document.body.classList.remove('dialog-open');
+  if (quoteTrigger && quoteTrigger.getClientRects().length) quoteTrigger.focus();
+});
+if (window.location.hash === '#orcamento') openQuote();
+quoteDialog.addEventListener('keydown', event => {
+  if (event.key !== 'Tab') return;
+  const controls = [...quoteDialog.querySelectorAll('button, input, select, textarea, a[href]')].filter(element => !element.disabled && element.getClientRects().length);
+  const first = controls[0];
+  const last = controls[controls.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault(); last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault(); first.focus();
+  }
+});
+window.addEventListener('hashchange', () => {
+  if (window.location.hash === '#orcamento') openQuote();
+});
