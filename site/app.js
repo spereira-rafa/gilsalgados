@@ -1,8 +1,8 @@
 const products = [
+  {name:'Salgados Tradicionais', type:'salgados', photo:'salgados.png', icon:'🥟', description:'Os queridinhos que não podem faltar na festa.', position:'65% 75%'},
   {name:'Finger Food', type:'salgados', photo:'finger-food.png', icon:'🥪', description:'Pequenos no tamanho, especiais em cada detalhe.', position:'70% 35%'},
   {name:'Tortas e Torteletes', type:'salgados', photo:'tortas.png', icon:'🥧', description:'Massa douradinha e recheios cheios de sabor.', position:'100% 45%'},
   {name:'Bolos Caseiros', type:'doces', photo:'bolos.png', icon:'🍰', description:'Um carinho em forma de bolo para compartilhar.'},
-  {name:'Salgados Tradicionais', type:'salgados', photo:'salgados.png', icon:'🥟', description:'Os queridinhos que não podem faltar na festa.', position:'65% 75%'},
   {name:'Mini Hambúrguer', type:'salgados', photo:'mini-hamburguer.png', icon:'🍔', description:'Pequenos lanches para grandes momentos.', position:'70% 25%'},
   {name:'Lanches Especiais', type:'salgados', photo:'lanches.png', icon:'🥖', description:'Caprichados do primeiro ao último pedaço.'},
   {name:'Tortas Doces', type:'doces', photo:'torta-doce.png', icon:'🍫', description:'A doçura que transforma qualquer ocasião.'},
@@ -27,7 +27,7 @@ products.forEach(product => {
   const title = document.createElement('h3'); title.textContent = product.name;
   const description = document.createElement('p'); description.textContent = product.description;
   const cta = document.createElement('span'); cta.className = 'product-cta'; cta.textContent = 'Quero encomendar →';
-  body.append(title, description, cta); card.append(media, body); grid.append(card);
+  body.append(title, cta); card.setAttribute('aria-label', `${product.name}: ${product.description} Encomendar pelo WhatsApp.`); card.append(media, body); grid.append(card);
 });
 document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
   document.querySelectorAll('[data-filter]').forEach(item => { item.classList.toggle('selected', item === button); item.setAttribute('aria-pressed', String(item === button)); });
