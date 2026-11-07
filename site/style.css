@@ -17,3 +17,6 @@
 /* Portrait supplied by Gil: preserve face and chef hat in each viewport. */
 .about-photo>img{object-position:50% 0%}
 @media(max-width:700px){.about-photo{height:360px}}
+/* Taller portrait framing shows Gil from the chef hat to the abdomen. */
+.about-photo{position:relative;aspect-ratio:2 / 3;height:auto;min-height:0;max-height:none;align-self:center}
+.about-photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0%}
