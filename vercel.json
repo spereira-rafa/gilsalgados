@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "outputDirectory": "site",
+  "rewrites": [
+    { "source": "/gilsalgados", "destination": "/index.html" },
+    { "source": "/gilsalgados/", "destination": "/index.html" },
+    { "source": "/gilsalgados/:path*", "destination": "/:path*" }
+  ]
+}
