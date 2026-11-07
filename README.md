@@ -42,3 +42,5 @@ A pessoa e os depoimentos do modelo foram confirmados como exemplos. A seção s
 O retrato atualizado original está preservado em `site/assets/GIL.png`. A versão exibida em `gil-site.png` foi preparada a partir dele com remoção do fundo quadriculado, em PNG transparente. O enquadramento 3:4 mostra o chapéu até a região da barriga.
 
 Retrato em uso: `gil02-site.png`, preparado com fundo transparente a partir de `GIL02.jpeg`. O arquivo original permanece preservado.
+
+Retrato atual: `gil03-site.png`, com fundo transparente preparado a partir de `site/GIL03.png`, mantendo o original.

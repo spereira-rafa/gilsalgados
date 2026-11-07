@@ -24,3 +24,7 @@
 /* Updated portrait: full chef hat-to-abdomen framing on the page background. */
 .about-photo{aspect-ratio:3 / 4;border-radius:0}
 .about-photo>img{object-fit:contain;object-position:50% 100%}
+/* Keep navigation centered independently of the contact buttons. */
+@media(min-width:701px){.header-inner{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);justify-content:normal}.header-inner>nav{grid-column:2;grid-row:1;justify-self:center}.header-social{grid-column:3;grid-row:1;justify-self:end}}
+@media(min-width:701px) and (max-width:1300px){.header-social .instagram{display:none}}
+@media(max-width:700px){nav a{text-align:center}}
