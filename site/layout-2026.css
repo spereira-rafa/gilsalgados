@@ -461,3 +461,26 @@ footer .footer-bottom{border-top:1px solid #b45a6a5c;opacity:.9}
 
 /* Redução proporcional de 20% da vitrine, mantendo o conjunto centralizado. */
 .gs-delicias-grid{width:80%;margin-inline:auto;zoom:.8}
+
+/* Valores unitários confirmados: mínimo de 100 unidades somadas, sem mínimo por variedade. */
+.menu-prices-intro{text-align:center;margin:0 auto 25px;max-width:740px}
+.menu-prices-intro p{font-size:14px;line-height:1.6;color:var(--gs-chocolate);margin:0 0 14px}
+.priced-menu{width:min(1040px,94%);max-height:90dvh;padding:30px;border:1px solid #e5c89f;border-radius:25px;background:var(--gs-cream);color:var(--gs-chocolate);box-shadow:0 20px 80px #35100666}
+.priced-menu::backdrop{background:#351506a6;backdrop-filter:blur(4px)}
+.priced-menu-close{position:absolute;top:8px;right:15px;background:none;border:0;font-size:30px;color:var(--gs-maroon);padding:0 5px}
+.priced-menu-heading{text-align:center;margin:6px 15px 25px}
+.priced-menu h2{font:italic 700 36px/1.1 Georgia,serif;color:var(--gs-maroon);margin:8px 0 14px}
+.priced-menu-heading p{font-size:13px;line-height:1.6;margin:6px 0}
+.priced-menu-groups{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px;align-items:start}
+.priced-menu h3{font:italic 700 25px/1.2 Georgia,serif;color:var(--gs-maroon);margin:0 0 15px}
+.priced-menu-row{display:flex;gap:14px;align-items:center;justify-content:space-between;padding:13px 0;border-bottom:1px solid #e9d6bd}
+.priced-menu-row>div{min-width:0}.priced-menu-row strong{font-size:14px;display:block;line-height:1.4}.priced-menu-row span{font-size:12px;display:block;color:#815c37;margin-top:5px}
+.priced-menu-row label{font-size:10px;display:flex;flex-direction:column;gap:5px;flex:0 0 78px;color:#745140}
+.priced-menu-row input{width:78px;padding:9px 6px;background:#fffdf8;border:1px solid #d9b77e;border-radius:9px;color:var(--gs-chocolate);font-size:16px;text-align:center}
+.priced-menu-row input:focus-visible{outline:2px solid #b88115;outline-offset:2px}
+.priced-menu-summary{padding:22px;background:#fffaf2;border:1px solid #ebd7b9;border-radius:17px;margin:25px 0 15px}
+.priced-menu-summary ul{padding-left:18px;font-size:13px;line-height:1.9;margin:8px 0}.priced-menu-summary p{font-size:12px;margin:12px 0 0;color:#7d5b44}
+.priced-menu-total{position:sticky;bottom:-30px;background:#fff7ecf5;border-top:2px solid #dcae50;padding:17px 0;display:flex;gap:18px;align-items:center;justify-content:space-between;backdrop-filter:blur(8px)}
+.priced-menu-total strong,.priced-menu-total span,.priced-menu-total small{display:block}.priced-menu-total strong{font-size:18px;color:var(--gs-maroon)}.priced-menu-total span{font-size:15px;font-weight:700;margin:5px 0}.priced-menu-total small{font-size:11px;color:#7b543a}
+.priced-menu-total button{cursor:pointer;max-width:45%;font-size:13px}.priced-menu-total button:disabled{cursor:default;opacity:.45;box-shadow:none;transform:none}
+@media(max-width:700px){.menu-prices-intro p{font-size:12px}.priced-menu{width:96%;max-height:94dvh;padding:28px 16px 16px;border-radius:20px}.priced-menu h2{font-size:30px}.priced-menu-heading{margin:5px 5px 22px}.priced-menu-heading p{font-size:12px}.priced-menu-groups{grid-template-columns:1fr;gap:27px}.priced-menu h3{font-size:25px}.priced-menu-row strong{font-size:13px}.priced-menu-row{gap:10px}.priced-menu-summary{padding:17px}.priced-menu-total{bottom:-16px;display:block;padding:14px 0}.priced-menu-total button{max-width:none;width:100%;margin-top:13px;font-size:13px}.priced-menu-total small{font-size:11px}}
