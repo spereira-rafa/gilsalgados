@@ -1,0 +1,336 @@
+
+/* Gil Salgados — layout 2026 inspirado no template aprovado.
+   Fotos reais e identidade da marca existentes no repositório. */
+:root{
+  --gs-maroon:#790321;
+  --gs-maroon-deep:#510019;
+  --gs-chocolate:#461b13;
+  --gs-cream:#fff7ec;
+  --gs-ivory:#fffaf3;
+  --gs-gold:#f6b516;
+  --gs-gold-soft:#ffd75a;
+  --gs-stroke:#f2ddc0;
+}
+html{scroll-padding-top:112px}
+body{background:var(--gs-cream);color:var(--gs-chocolate)}
+body,button,input,textarea,select{font-family:Arial,Helvetica,sans-serif}
+:where(.gs-hero,.gs-kits,.gs-events-strip,.gs-about,.gs-catalog,.gs-quote-banner) img{max-width:100%}
+:where(.gs-hero,.gs-kits,.gs-events-strip,.gs-about,.gs-catalog,.gs-quote-banner) .icon{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.gs-header{background:#fffaf3;z-index:45;border:0;box-shadow:0 1px 0 rgba(97,34,18,.08);position:relative}
+.gs-header .gs-header-inner{
+  display:grid!important;grid-template-columns:200px minmax(0,1fr) auto!important;
+  align-items:center;justify-content:space-between;gap:18px;
+  width:min(1470px,94%);min-height:92px!important;position:relative
+}
+.gs-header .gs-brand{grid-column:1;grid-row:1;display:flex;align-items:center;justify-content:start}
+.gs-header .brand-logo{
+  display:block;width:185px;height:88px;max-height:none;
+  object-fit:contain;mix-blend-mode:multiply
+}
+.gs-header nav{
+  grid-column:2!important;grid-row:1!important;display:flex;
+  justify-content:center;align-items:center;justify-self:stretch!important;gap:3px
+}
+.gs-header nav a{
+  color:#3f1814;font-weight:700;font-size:12px;line-height:1.2;
+  border-radius:30px;padding:10px 12px;transition:background .2s,color .2s
+}
+.gs-header nav a.active,.gs-header nav a:hover{
+  color:#fff;background:linear-gradient(120deg,#9d0930,#68011f);
+  box-shadow:0 3px 7px #6c082016
+}
+.gs-header-actions{grid-column:3;grid-row:1;display:flex;gap:9px;align-items:center;justify-content:flex-end}
+.gs-social{width:33px;height:35px;display:inline-flex;align-items:center;justify-content:center;color:var(--gs-maroon);border-radius:10px}
+.gs-social:hover{background:#fce9d1}
+.gs-social .icon{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7}
+.gs-cta{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  border-radius:999px;min-height:44px;padding:11px 22px;border:1px solid rgba(142,42,14,.1);
+  font-weight:800;line-height:1.25;font-size:13px;text-align:center;
+  box-shadow:0 5px 13px rgba(90,28,16,.13);transition:transform .18s,box-shadow .18s
+}
+.gs-cta:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(90,28,16,.17)}
+.gs-cta .icon{width:22px;height:22px;stroke-width:1.9}
+.gs-cta-gold{background:linear-gradient(130deg,#ffdc24,#ffc400);color:#331700;white-space:nowrap}
+.gs-cta-burgundy,.gs-hero-cta{background:linear-gradient(115deg,#aa0731,#75011d);color:white;border-color:#b63e53}
+.gs-nav-toggle{display:none;grid-column:3;grid-row:1;color:var(--gs-maroon)}
+/* Capa inspirada no template: Gil à esquerda, história ao centro e foto real à direita. */
+.gs-hero{min-height:460px;background:radial-gradient(ellipse at 58% 10%,#fffefd 0,#fff3e3 72%,#fff7ee 100%);position:relative;isolation:isolate;overflow:hidden}
+.gs-hero-ornament{
+  position:absolute;left:-130px;bottom:24px;width:calc(31% + 130px);height:280px;
+  border-radius:0 60% 30% 0;background:linear-gradient(135deg,#850323,#60001d);
+  z-index:-1;transform:rotate(-6deg);border-top:8px solid #ffcf2a
+}
+.gs-hero-ornament span{position:absolute;right:24%;top:17%;font:160px/1 Georgia,serif;color:#ffc323;transform:rotate(4deg);opacity:.94}
+.gs-hero .gs-hero-grid{
+  width:min(1500px,97%);margin:auto;
+  display:grid;grid-template-columns:minmax(0,29%) minmax(0,34%) minmax(0,37%);
+  min-height:465px;align-items:center;position:relative;z-index:1
+}
+.gs-hero-portrait{height:100%;position:relative;align-self:end;z-index:3;pointer-events:none}
+.gs-hero-portrait img{
+  display:block;position:absolute;bottom:13px;left:-12px;
+  height:auto;max-height:440px;width:min(110%,415px);
+  object-fit:contain;object-position:bottom center
+}
+.gs-hero-message{position:relative;z-index:4;padding:25px 0 66px 10px;min-width:0}
+.gs-overline{font-size:clamp(11px,1.35vw,17px);font-weight:700;letter-spacing:1.3px;color:var(--gs-maroon);margin:0 0 5px;text-transform:uppercase}
+.gs-hero h1{
+  font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:clamp(34px,3.7vw,59px);
+  letter-spacing:-2px;line-height:1.04;color:var(--gs-maroon);
+  margin:2px 0 11px;white-space:normal
+}
+.gs-hero h1 em{font-weight:inherit;white-space:normal}
+.gs-title-swoosh{width:min(310px,78%);height:12px;margin:0 0 14px 12px;border-top:5px solid #f6b510;border-radius:50% 70% 0 0;transform:rotate(-2deg)}
+.gs-hero-description{font-size:clamp(13px,1.26vw,17px);font-weight:600;line-height:1.45;color:#4e2920;margin:0 0 21px;max-width:430px}
+.gs-hero-description span{font-family:Georgia,serif;color:#ce102e;font-size:26px;line-height:0}
+.gs-hero-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;max-width:470px;margin:0 0 20px}
+.gs-hero-benefits>div{display:flex;align-items:center;justify-content:center;gap:6px;min-width:0;padding:4px 6px;color:#4a2019}
+.gs-hero-benefits>div+div{border-left:1px solid #d3ad74}
+.gs-hero-benefits .icon{color:#dd9410;flex:none;width:31px;height:31px}
+.gs-hero-benefits span{font-size:clamp(9px,.83vw,12px);font-weight:700;line-height:1.3}
+.gs-hero-cta{font-size:13px;padding:11px 22px;min-height:44px}
+.gs-hero-product{height:440px;align-self:stretch;z-index:2;position:relative;overflow:hidden;border-radius:39% 0 0 32%;margin-right:-10vw;mask-image:linear-gradient(90deg,transparent 0%,black 16%)}
+.gs-hero-product img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;filter:saturate(1.02)}
+.gs-hero-wave{
+  position:absolute;left:0;right:0;bottom:-1px;z-index:5;height:67px;
+  background:var(--gs-gold);
+  clip-path:polygon(0 54%,8% 36%,17% 44%,27% 60%,38% 45%,49% 29%,61% 33%,72% 54%,82% 62%,92% 44%,100% 22%,100% 100%,0 100%)
+}
+.gs-hero-wave:after{
+  content:"";display:block;position:absolute;inset:7px 0 0;background:var(--gs-cream);
+  clip-path:polygon(0 54%,8% 36%,17% 44%,27% 60%,38% 45%,49% 29%,61% 33%,72% 54%,82% 62%,92% 44%,100% 22%,100% 100%,0 100%)
+}
+/* Kits e ocasiões como na referência, sem preços fictícios. */
+.gs-kits{position:relative;z-index:6;padding:6px 0 19px}
+.gs-section-title{display:flex;gap:15px;justify-content:center;align-items:center;text-align:center}
+.gs-section-title h2{
+  font:italic 700 clamp(28px,3vw,41px)/1.13 Georgia,'Times New Roman',serif;
+  color:#750521;letter-spacing:-.8px;margin:0
+}
+.gs-heading-rule{width:70px;height:2px;flex:none;background:linear-gradient(90deg,#f7ae05,transparent)}
+.gs-heading-rule:last-child{transform:rotate(180deg)}
+.gs-section-subtitle{font-size:14px;font-weight:600;text-align:center;margin:7px 0 19px;line-height:1.5;color:#5c3126}
+.gs-kit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.gs-kit{
+  position:relative;display:grid;grid-template-columns:48% 52%;min-height:218px;
+  background:linear-gradient(145deg,#fffdf7,#fff5e7);border:1px solid #f4dfc2;
+  border-radius:22px;box-shadow:0 7px 14px rgba(143,77,23,.11);overflow:hidden
+}
+.gs-kit-image{grid-column:1;grid-row:1;width:100%;height:180px;object-fit:cover;object-position:50% 50%;border-radius:18px 0 0 0}
+.gs-kit-info{grid-column:2;grid-row:1;padding:10px 11px 52px;min-width:0}
+.gs-kit h3{font:italic 700 clamp(21px,2vw,30px)/1.05 Georgia,serif;color:#78031f;margin:1px 0 7px}
+.gs-kit h3 small{display:block;font:700 14px/1.25 Arial,Helvetica,sans-serif;margin-top:2px;color:#4c2019}
+.gs-kit p{font-size:11px;line-height:1.4;color:#4b271d;margin:7px 0 10px}
+.gs-kit-price{display:inline-flex;font-size:11px;font-weight:800;background:#ffce20;color:#361800;border-radius:20px;padding:7px 9px;margin:0}
+.gs-kit-link{
+  position:absolute;bottom:9px;left:18%;right:18%;display:flex;align-items:center;justify-content:center;gap:5px;
+  border-radius:25px;padding:6px 10px;color:#fff;background:linear-gradient(#a30a30,#690019);
+  font-size:11px;font-weight:800;white-space:nowrap;box-shadow:0 4px 7px #55152222
+}
+.gs-kit-link .icon{width:16px;height:16px;flex:none}
+.gs-kit-link:hover{background:#520019}
+.gs-kits-notice{text-align:center;margin:15px 0 0;color:#7f5948;font-size:11px;line-height:1.5}
+.gs-events-strip{
+  display:grid;grid-template-columns:21% minmax(0,1fr);
+  border-radius:55px;border:1px solid #f1dbb8;
+  box-shadow:0 6px 13px #722f0d16;background:#fff8e6;overflow:hidden;min-height:84px;margin-block:6px 30px
+}
+.gs-events-title{
+  color:white;background:linear-gradient(110deg,#970528,#63011b);
+  padding:17px 18px 16px 34px;display:flex;align-items:center;
+  font:italic 700 23px/1.05 Georgia,serif;position:relative
+}
+.gs-events-title:after{content:"";position:absolute;right:-20px;top:0;bottom:0;width:40px;background:#63011b;transform:skew(-25deg)}
+.gs-events-options{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:center;padding:12px 10px 12px 32px;min-width:0}
+.gs-occasion{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:1px 6px;color:#4b1d17}
+.gs-occasion+.gs-occasion{border-left:1px solid #eabf75}
+.gs-occasion .icon{width:29px;height:29px;color:#9d052c;stroke-width:1.65}
+.gs-occasion b{font-size:12px;line-height:1.15}
+.gs-about{display:grid;grid-template-columns:44% minmax(0,56%);gap:30px;padding-block:6px 40px;align-items:center}
+.gs-about-story{padding:4px 0}
+.gs-about h2{
+  font:italic 700 clamp(32px,3vw,42px)/1.1 Georgia,serif;letter-spacing:-.6px;
+  color:var(--gs-maroon);margin:0 0 14px
+}
+.gs-about h2 span{font:normal 46px/0.1 Georgia,serif;color:#f1b400;vertical-align:middle}
+.gs-about-lead{
+  border-left:5px solid var(--gs-gold);padding-left:13px;
+  color:#661d1c;font-weight:800;font-size:15px!important;line-height:1.45!important
+}
+.gs-about-story p{font-size:13px;line-height:1.55;color:#4e291e;margin:9px 0}
+.gs-story-link{
+  display:inline-flex;align-items:center;gap:14px;color:#fff;background:linear-gradient(#9f092e,#69001d);
+  border-radius:28px;padding:9px 18px;font-size:12px;font-weight:800;margin-top:7px;
+  box-shadow:0 5px 9px #70270d22
+}
+.gs-story-link:hover{background:#4e0014}
+.gs-about-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:stretch}
+.gs-about-gallery img{height:212px;width:100%;object-fit:cover;border-radius:17px;box-shadow:0 5px 12px #55220f1a}
+/* Cardápio real mantém filtros e WhatsApp do site já existente. */
+.gs-catalog{background:linear-gradient(180deg,#fff0df,#fff9f1);padding:44px 0 50px}
+.gs-catalog .gs-menu{padding:0;margin:0;width:100%}
+.gs-catalog .filter-details{margin:15px auto 19px;text-align:center}
+.gs-catalog .filter-details>summary{font-size:12px;font-weight:700;color:#862243}
+.gs-catalog .filters{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin:12px 0 20px}
+.gs-catalog .filters button{font-weight:700;font-size:12px;border:1px solid #e5bd8c;border-radius:25px;padding:9px 18px;background:#fffdf9;color:#772221}
+.gs-catalog .filters button.selected,.gs-catalog .filters button:hover{background:var(--gs-maroon);color:white;border-color:var(--gs-maroon)}
+.gs-catalog .menu-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.gs-catalog .menu-grid .product{
+  display:flex;flex-direction:column;min-width:0;overflow:hidden;background:white;
+  border:1px solid #f0d1aa;border-radius:19px;box-shadow:0 6px 14px #7a360f14;
+  transition:transform .2s,box-shadow .2s
+}
+.gs-catalog .menu-grid .product[hidden]{display:none}
+.gs-catalog .menu-grid .product:hover{transform:translateY(-3px);box-shadow:0 9px 20px #7a360f20}
+.gs-catalog .product-media{height:180px;width:100%;background:#f8e7d4;position:relative;overflow:hidden}
+.gs-catalog .product-media img{display:block;width:100%;height:100%;object-fit:cover}
+.gs-catalog .product-body{display:flex;flex-direction:row;align-items:center;gap:10px;padding:15px;min-height:65px;background:#fffbf5}
+.gs-catalog .product-body h3{font-size:15px;color:#5d191b;font-weight:800;margin:0}
+.gs-catalog .product-body>.icon{width:27px;height:27px;flex:none;color:#d18c10}
+.gs-catalog .menu-caption{font-size:12px;text-align:center;margin:20px 0 0;color:#7b5943}
+.gs-quote-banner{background:linear-gradient(120deg,#79011f,#480012);color:#fff;position:relative;overflow:hidden}
+.gs-quote-inner{display:grid;grid-template-columns:35% 65%;align-items:center;gap:34px;max-width:1190px}
+.gs-quote-image{height:245px;overflow:hidden}
+.gs-quote-image img{width:100%;height:100%;object-fit:cover;object-position:center;border-radius:0 50% 50% 0}
+.gs-quote-text{padding:28px 18px 33px 0}
+.gs-quote-text .gs-overline{color:#ffcd4b;font-size:11px;letter-spacing:2px}
+.gs-quote-text h2{font:italic 700 37px/1.12 Georgia,serif;margin:6px 0 10px;color:#fff}
+.gs-quote-text p{font-size:14px;line-height:1.5;max-width:620px}
+.gs-quote-text .gs-cta{margin-top:7px;background:linear-gradient(#ffd12f,#f4a800);color:#451909}
+.gs-quote-text .gs-cta .icon{color:#5c1b15}
+footer{background:linear-gradient(150deg,#60001a,#3a0d0f)!important;color:white}
+footer .footer-grid{width:min(1270px,92%);padding:34px 0 25px;gap:26px;align-items:start}
+footer .footer-brand{background:#fff5e8!important;border-radius:20px;padding:12px!important}
+footer .footer-brand .brand-logo{width:100%;max-height:130px;height:auto!important;object-fit:contain;filter:none!important;mix-blend-mode:multiply}
+footer h2{color:#ffd475;font-size:17px;font-style:normal}
+footer .footer-grid p,footer .footer-grid a{color:#fff8ef}
+footer .footer-wave,footer .footer-end-wave{display:none}
+footer .footer-bottom{border-top:1px solid #b45a6a5c;opacity:.9}
+.floating-whatsapp{display:flex!important;align-items:center;justify-content:center;position:fixed;bottom:20px;right:22px;z-index:50;background:#138b3b;color:white;border-radius:50%;width:55px;height:55px;box-shadow:0 6px 18px #132b173d}
+.floating-whatsapp .icon{width:30px;height:30px}
+@media(max-width:1320px){
+ .gs-header .gs-header-inner{width:96%;grid-template-columns:160px minmax(0,1fr) auto!important;gap:6px}
+ .gs-header .brand-logo{width:155px;height:80px}
+ .gs-header nav a{font-size:11px;padding:9px 8px}
+ .gs-header-actions{gap:5px}
+ .gs-header-actions .gs-cta{font-size:12px;padding-inline:13px}
+ .gs-hero-portrait img{max-height:410px}
+ .gs-kit h3{font-size:24px}
+ .gs-kit-info{padding:10px 8px 48px}
+ .gs-kit-price{font-size:10px}
+ .gs-kit-link{left:10%;right:10%;font-size:10px}
+}
+@media(max-width:1070px){
+ .gs-header .gs-header-inner{grid-template-columns:minmax(0,1fr) auto auto!important;min-height:84px!important}
+ .gs-header .gs-brand{grid-column:1}
+ .gs-header .brand-logo{width:146px;height:77px}
+ .gs-header .gs-nav-toggle{display:inline-flex!important;align-items:center;justify-content:center;grid-column:3;grid-row:1;width:38px;height:38px;border:1px solid #f0caa0;border-radius:12px;background:#fff5ea}
+ .gs-header nav{display:none!important;position:absolute!important;left:0;right:0;top:84px!important;grid-column:auto!important;grid-row:auto!important;background:#fffaf3;box-shadow:0 13px 24px #54230a23;padding:12px!important;flex-direction:column;gap:2px;align-items:stretch;z-index:99}
+ .gs-header nav.open{display:flex!important}
+ .gs-header nav a{font-size:14px;text-align:center;padding:12px}
+ .gs-header-actions{grid-column:2;grid-row:1}
+ .gs-header-actions .gs-social{display:none}
+ .gs-hero .gs-hero-grid{grid-template-columns:30% 39% 31%;min-height:410px}
+ .gs-hero-portrait img{max-height:385px}
+ .gs-hero-message{padding-bottom:62px}
+ .gs-hero h1{font-size:41px}
+ .gs-hero-product{height:405px}
+ .gs-hero-benefits>div{padding:3px}
+ .gs-hero-benefits span{font-size:10px}
+ .gs-kit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .gs-kit{min-height:205px}
+ .gs-kit-image{height:175px}
+ .gs-kit-info{padding:14px 20px 52px}
+ .gs-kit h3{font-size:29px}
+ .gs-kit p{font-size:13px}
+ .gs-about-gallery img{height:175px}
+ .gs-events-title{font-size:19px}
+ .gs-occasion b{font-size:11px}
+}
+@media(max-width:700px){
+ html{scroll-padding-top:92px}
+ .container{width:90%}
+ .gs-header .gs-header-inner{width:94%;min-height:80px!important}
+ .gs-header .brand-logo{width:136px;height:74px}
+ .gs-header nav{top:80px!important}
+ .gs-header-actions .gs-cta{font-size:11px;min-height:38px;padding:8px 11px}
+ .gs-header-actions .gs-cta .icon{width:17px;height:17px}
+ .gs-hero{min-height:0}
+ .gs-hero-ornament{left:-95px;bottom:228px;width:57%;height:225px}
+ .gs-hero-ornament span{font-size:110px;right:12%;top:16%}
+ .gs-hero .gs-hero-grid{display:grid;grid-template-columns:36% 64%;grid-template-areas:"portrait message" "food food";width:96%;min-height:0;align-items:stretch}
+ .gs-hero-portrait{grid-area:portrait;height:305px;min-width:0}
+ .gs-hero-portrait img{bottom:0;left:-8%;width:134%;height:310px;max-height:310px;object-fit:contain;object-position:bottom}
+ .gs-hero-message{grid-area:message;padding:34px 4px 24px 9px;align-self:center}
+ .gs-overline{font-size:10px;letter-spacing:.5px}
+ .gs-hero h1{font-size:clamp(27px,7vw,40px);letter-spacing:-1.3px;line-height:1.06;margin:6px 0 9px}
+ .gs-title-swoosh{height:7px;border-top-width:3px;margin:0 0 10px}
+ .gs-hero-description{font-size:12px;line-height:1.35;margin-bottom:14px}
+ .gs-hero-benefits{display:none}
+ .gs-hero-cta{font-size:10px;padding:8px 10px;min-height:37px;gap:5px}
+ .gs-hero-cta .icon{width:16px;height:16px}
+ .gs-hero-product{grid-area:food;height:205px;margin:0 -2% 35px;mask-image:none;border-radius:28px;align-self:auto}
+ .gs-hero-product img{height:100%;object-position:center 55%}
+ .gs-hero-wave{height:46px}
+ .gs-kits{padding-top:8px}
+ .gs-section-title{gap:8px}
+ .gs-section-title h2{font-size:clamp(25px,7.2vw,32px)}
+ .gs-heading-rule{width:24px}
+ .gs-section-subtitle{font-size:12px;margin:7px 0 15px}
+ .gs-kit-grid{grid-template-columns:1fr;gap:12px}
+ .gs-kit{grid-template-columns:44% 56%;min-height:186px}
+ .gs-kit-image{height:157px}
+ .gs-kit-info{padding:12px 13px 45px}
+ .gs-kit h3{font-size:26px}
+ .gs-kit p{font-size:12px;margin:6px 0}
+ .gs-kit-price{padding:5px 9px;font-size:10px}
+ .gs-kit-link{font-size:11px;left:14%;right:14%;bottom:8px}
+ .gs-kits-notice{font-size:10px}
+ .gs-events-strip{grid-template-columns:1fr;border-radius:28px;overflow:hidden;margin-top:12px;margin-bottom:27px}
+ .gs-events-title{padding:11px 18px;justify-content:center;font-size:19px;text-align:center;line-height:1.2}
+ .gs-events-title:after{display:none}
+ .gs-events-options{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 0;padding:14px 10px}
+ .gs-occasion{min-height:65px}
+ .gs-occasion .icon{width:26px;height:26px}
+ .gs-occasion b{font-size:10px}
+ .gs-occasion:nth-child(4){border-left:0}
+ .gs-about{grid-template-columns:1fr;gap:15px;padding-block:0 33px}
+ .gs-about h2{font-size:35px}
+ .gs-about-story p{font-size:13px}
+ .gs-about-gallery{gap:7px}
+ .gs-about-gallery img{height:116px;border-radius:12px}
+ .gs-catalog{padding:31px 0 37px}
+ .gs-catalog .filters{gap:6px}
+ .gs-catalog .filters button{font-size:11px;padding:8px 10px}
+ .gs-catalog .menu-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .gs-catalog .product-media{height:132px}
+ .gs-catalog .product-body{padding:11px;min-height:58px;gap:6px}
+ .gs-catalog .product-body h3{font-size:12px}
+ .gs-catalog .product-body>.icon{width:21px;height:21px}
+ .gs-quote-inner{grid-template-columns:1fr;gap:0}
+ .gs-quote-image{height:155px}
+ .gs-quote-image img{border-radius:0 0 25px 25px}
+ .gs-quote-text{padding:22px 0 30px}
+ .gs-quote-text h2{font-size:30px}
+ .gs-quote-text p{font-size:13px}
+ footer .footer-grid{grid-template-columns:1fr 1fr;gap:8px}
+ footer .footer-grid>.brand{grid-column:1 / -1}
+ footer .footer-brand{width:175px}
+ footer .footer-grid>div{padding-left:0}
+ .floating-whatsapp{right:14px;bottom:14px;width:51px;height:51px}
+}
+@media(max-width:380px){
+ .gs-header-actions .gs-cta{font-size:10px;padding:8px}
+ .gs-header .brand-logo{width:118px}
+ .gs-hero-portrait{height:290px}
+ .gs-hero-portrait img{height:295px}
+ .gs-hero h1{font-size:25px}
+ .gs-hero-description{font-size:11px}
+ .gs-hero-cta{font-size:9px}
+ .gs-kit-info{padding-right:8px}
+ .gs-kit h3{font-size:22px}
+}
+@media(prefers-reduced-motion:reduce){
+ .gs-cta,.gs-story-link,.gs-catalog .menu-grid .product{transition:none}
+}
