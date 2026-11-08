@@ -14,8 +14,8 @@
 html{scroll-padding-top:112px}
 body{background:var(--gs-cream);color:var(--gs-chocolate)}
 body,button,input,textarea,select{font-family:Arial,Helvetica,sans-serif}
-:where(.gs-hero,.gs-kits,.gs-events-strip,.gs-about,.gs-catalog,.gs-quote-banner) img{max-width:100%}
-:where(.gs-hero,.gs-kits,.gs-events-strip,.gs-about,.gs-catalog,.gs-quote-banner) .icon{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+:where(.gs-hero,.gs-delicias,.gs-events-strip,.gs-about,.gs-catalog,.gs-quote-banner) img{max-width:100%}
+:where(.gs-hero,.gs-delicias,.gs-events-strip,.gs-about,.gs-catalog,.gs-quote-banner) .icon{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .gs-header{background:#fffaf3;z-index:45;border:0;box-shadow:0 1px 0 rgba(97,34,18,.08);position:relative}
 .gs-header .gs-header-inner{
   display:grid!important;grid-template-columns:200px minmax(0,1fr) auto!important;
@@ -101,8 +101,8 @@ body,button,input,textarea,select{font-family:Arial,Helvetica,sans-serif}
   content:"";display:block;position:absolute;inset:7px 0 0;background:var(--gs-cream);
   clip-path:polygon(0 54%,8% 36%,17% 44%,27% 60%,38% 45%,49% 29%,61% 33%,72% 54%,82% 62%,92% 44%,100% 22%,100% 100%,0 100%)
 }
-/* Kits e ocasiões como na referência, sem preços fictícios. */
-.gs-kits{position:relative;z-index:6;padding:6px 0 19px}
+/* Vitrine institucional e ocasiões: sem ofertas, quantidades ou preços. */
+.gs-delicias{position:relative;z-index:6;padding:6px 0 19px}
 .gs-section-title{display:flex;gap:15px;justify-content:center;align-items:center;text-align:center}
 .gs-section-title h2{
   font:italic 700 clamp(28px,3vw,41px)/1.13 Georgia,'Times New Roman',serif;
@@ -111,26 +111,6 @@ body,button,input,textarea,select{font-family:Arial,Helvetica,sans-serif}
 .gs-heading-rule{width:70px;height:2px;flex:none;background:linear-gradient(90deg,#f7ae05,transparent)}
 .gs-heading-rule:last-child{transform:rotate(180deg)}
 .gs-section-subtitle{font-size:14px;font-weight:600;text-align:center;margin:7px 0 19px;line-height:1.5;color:#5c3126}
-.gs-kit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-.gs-kit{
-  position:relative;display:grid;grid-template-columns:48% 52%;min-height:218px;
-  background:linear-gradient(145deg,#fffdf7,#fff5e7);border:1px solid #f4dfc2;
-  border-radius:22px;box-shadow:0 7px 14px rgba(143,77,23,.11);overflow:hidden
-}
-.gs-kit-image{grid-column:1;grid-row:1;width:100%;height:180px;object-fit:cover;object-position:50% 50%;border-radius:18px 0 0 0}
-.gs-kit-info{grid-column:2;grid-row:1;padding:10px 11px 52px;min-width:0}
-.gs-kit h3{font:italic 700 clamp(21px,2vw,30px)/1.05 Georgia,serif;color:#78031f;margin:1px 0 7px}
-.gs-kit h3 small{display:block;font:700 14px/1.25 Arial,Helvetica,sans-serif;margin-top:2px;color:#4c2019}
-.gs-kit p{font-size:11px;line-height:1.4;color:#4b271d;margin:7px 0 10px}
-.gs-kit-price{display:inline-flex;font-size:11px;font-weight:800;background:#ffce20;color:#361800;border-radius:20px;padding:7px 9px;margin:0}
-.gs-kit-link{
-  position:absolute;bottom:9px;left:18%;right:18%;display:flex;align-items:center;justify-content:center;gap:5px;
-  border-radius:25px;padding:6px 10px;color:#fff;background:linear-gradient(#a30a30,#690019);
-  font-size:11px;font-weight:800;white-space:nowrap;box-shadow:0 4px 7px #55152222
-}
-.gs-kit-link .icon{width:16px;height:16px;flex:none}
-.gs-kit-link:hover{background:#520019}
-.gs-kits-notice{text-align:center;margin:15px 0 0;color:#7f5948;font-size:11px;line-height:1.5}
 .gs-events-strip{
   display:grid;grid-template-columns:21% minmax(0,1fr);
   border-radius:55px;border:1px solid #f1dbb8;
@@ -216,10 +196,6 @@ footer .footer-bottom{border-top:1px solid #b45a6a5c;opacity:.9}
  .gs-header-actions{gap:5px}
  .gs-header-actions .gs-cta{font-size:12px;padding-inline:13px}
  .gs-hero-portrait img{max-height:410px}
- .gs-kit h3{font-size:24px}
- .gs-kit-info{padding:10px 8px 48px}
- .gs-kit-price{font-size:10px}
- .gs-kit-link{left:10%;right:10%;font-size:10px}
 }
 @media(max-width:1070px){
  .gs-header .gs-header-inner{grid-template-columns:minmax(0,1fr) auto auto!important;min-height:84px!important}
@@ -238,12 +214,6 @@ footer .footer-bottom{border-top:1px solid #b45a6a5c;opacity:.9}
  .gs-hero-product{height:405px}
  .gs-hero-benefits>div{padding:3px}
  .gs-hero-benefits span{font-size:10px}
- .gs-kit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
- .gs-kit{min-height:205px}
- .gs-kit-image{height:175px}
- .gs-kit-info{padding:14px 20px 52px}
- .gs-kit h3{font-size:29px}
- .gs-kit p{font-size:13px}
  .gs-about-gallery img{height:175px}
  .gs-events-title{font-size:19px}
  .gs-occasion b{font-size:11px}
@@ -273,20 +243,11 @@ footer .footer-bottom{border-top:1px solid #b45a6a5c;opacity:.9}
  .gs-hero-product{grid-area:food;height:205px;margin:0 -2% 35px;mask-image:none;border-radius:28px;align-self:auto}
  .gs-hero-product img{height:100%;object-position:center 55%}
  .gs-hero-wave{height:46px}
- .gs-kits{padding-top:8px}
+ .gs-delicias{padding-top:8px}
  .gs-section-title{gap:8px}
  .gs-section-title h2{font-size:clamp(25px,7.2vw,32px)}
  .gs-heading-rule{width:24px}
  .gs-section-subtitle{font-size:12px;margin:7px 0 15px}
- .gs-kit-grid{grid-template-columns:1fr;gap:12px}
- .gs-kit{grid-template-columns:44% 56%;min-height:186px}
- .gs-kit-image{height:157px}
- .gs-kit-info{padding:12px 13px 45px}
- .gs-kit h3{font-size:26px}
- .gs-kit p{font-size:12px;margin:6px 0}
- .gs-kit-price{padding:5px 9px;font-size:10px}
- .gs-kit-link{font-size:11px;left:14%;right:14%;bottom:8px}
- .gs-kits-notice{font-size:10px}
  .gs-events-strip{grid-template-columns:1fr;border-radius:28px;overflow:hidden;margin-top:12px;margin-bottom:27px}
  .gs-events-title{padding:11px 18px;justify-content:center;font-size:19px;text-align:center;line-height:1.2}
  .gs-events-title:after{display:none}
@@ -328,8 +289,6 @@ footer .footer-bottom{border-top:1px solid #b45a6a5c;opacity:.9}
  .gs-hero h1{font-size:25px}
  .gs-hero-description{font-size:11px}
  .gs-hero-cta{font-size:9px}
- .gs-kit-info{padding-right:8px}
- .gs-kit h3{font-size:22px}
 }
 @media(prefers-reduced-motion:reduce){
  .gs-cta,.gs-story-link,.gs-catalog .menu-grid .product{transition:none}
@@ -483,3 +442,19 @@ footer .footer-bottom{border-top:1px solid #b45a6a5c;opacity:.9}
  .gs-header-actions{gap:4px}.gs-header-actions .gs-social{display:inline-flex;width:23px;height:28px}
  .gs-header-actions .gs-social .icon{width:18px;height:18px}
 }
+
+/* Nossas Delícias: vitrine de fotografias originais, sem ações comerciais nos cards. */
+.gs-delicias{padding-block:18px 32px}
+.gs-delicias>.gs-section-subtitle{max-width:780px;margin:10px auto 25px;font-weight:400;font-size:15px;line-height:1.6}
+.gs-delicias-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:stretch}
+.gs-delicia{overflow:hidden;border-radius:25px;background:#fffaf2;border:1px solid #efdabd;box-shadow:0 6px 16px #74361813;min-width:0}
+.gs-delicia-photo{position:relative;aspect-ratio:4 / 3;background:#f7e6d0;overflow:hidden}
+.gs-delicia-photo>img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.gs-delicia:nth-child(2) .gs-delicia-photo>img{object-position:50% 0%}
+.gs-delicia-wave{position:absolute;bottom:-1px;left:0;width:100%;height:32px;display:block;pointer-events:none}
+.gs-delicia-info{padding:7px 20px 25px;text-align:center}
+.gs-delicia-info>.icon{display:block;width:34px;height:34px;color:#c88b12;stroke-width:1.4;margin:2px auto 10px}
+.gs-delicia h3{font:italic 700 clamp(22px,1.9vw,29px)/1.12 Georgia,'Times New Roman',serif;color:var(--gs-maroon);letter-spacing:-.5px;margin:0 0 10px;min-height:2.24em;display:flex;align-items:center;justify-content:center}
+.gs-delicia p{font-size:14px;line-height:1.6;color:var(--gs-chocolate);margin:0 auto;max-width:28ch}
+@media(min-width:701px) and (max-width:1070px){.gs-delicias-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.gs-delicia h3{font-size:28px;min-height:0}.gs-delicia-photo{aspect-ratio:3 / 2}}
+@media(max-width:700px){.gs-delicias{padding-block:15px 28px}.gs-delicias>.gs-section-subtitle{font-size:13px;line-height:1.7;margin:10px auto 20px}.gs-delicias-grid{grid-template-columns:1fr;gap:20px}.gs-delicia{border-radius:23px}.gs-delicia-photo{aspect-ratio:4 / 3}.gs-delicia-info{padding:8px 24px 25px}.gs-delicia h3{font-size:29px;min-height:0}.gs-delicia p{font-size:14px}.gs-delicia-info>.icon{width:32px;height:32px}}
