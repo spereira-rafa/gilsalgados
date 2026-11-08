@@ -382,3 +382,10 @@ footer .footer-bottom{border-top:1px solid #b45a6a5c;opacity:.9}
               linear-gradient(0deg,rgba(78,16,6,.08),transparent 30%);
  }
 }
+
+/* Composição ilustrativa premium: enquadramento integral, sem ampliar ou cortar os salgados.
+   A caixa e o restante do layout aprovado permanecem com as dimensões existentes. */
+.gs-hero-product{background:linear-gradient(135deg,#fff3e3,#f4dfc1)}
+.gs-hero-product img{object-fit:contain;object-position:center;transform:none}
+.gs-hero-product::after{background:linear-gradient(90deg,rgba(255,243,227,.65),transparent 14%)}
+@media(min-width:701px){.gs-hero-product{margin-right:0}}
