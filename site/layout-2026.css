@@ -382,3 +382,104 @@ footer .footer-bottom{border-top:1px solid #b45a6a5c;opacity:.9}
               linear-gradient(0deg,rgba(78,16,6,.08),transparent 30%);
  }
 }
+
+/* Revisão do cabeçalho e Hero conforme a referência: demais seções preservadas. */
+.gs-header{box-shadow:none;background:#fffaf3;isolation:isolate}
+.gs-header .gs-header-inner{min-height:64px!important;width:min(1640px,94%);grid-template-columns:220px minmax(0,1fr) auto!important;gap:15px;z-index:2}
+.gs-header .gs-brand{align-self:start;position:relative;height:64px;z-index:3}
+.gs-header .brand-logo{position:absolute;top:0;left:0;width:205px;height:140px}
+.gs-header nav a{font-size:12px;padding:7px 12px}
+.gs-header-actions .gs-cta{min-height:38px;padding:9px 18px;font-size:12px}
+.gs-header-actions{gap:7px}
+.gs-header-wave{position:absolute;left:0;top:calc(100% - 1px);height:75px;width:100%;pointer-events:none;z-index:1}
+.gs-hero{min-height:0;background:radial-gradient(ellipse at 43% 38%,#fffbf5 0,#fff3e3 80%)}
+.gs-hero .gs-hero-grid{width:min(1640px,96%);min-height:0;height:clamp(310px,25vw,420px);grid-template-columns:28% 33% 39%;align-items:stretch}
+.gs-hero-portrait{height:100%;align-self:stretch;z-index:4}
+.gs-hero-portrait img{bottom:9px;left:3%;width:112%;max-width:none;height:calc(100% + 10px);max-height:none;object-fit:contain;object-position:50% 100%}
+.gs-hero-message{align-self:center;text-align:center;padding:22px 0 40px;z-index:4}
+.gs-hero-message .gs-overline{font-size:clamp(15px,1.55vw,23px);text-transform:none;letter-spacing:-.5px;margin:0 0 4px;font-weight:700}
+.gs-hero h1{font-size:clamp(36px,3.85vw,63px);font-weight:700;letter-spacing:-1.8px;line-height:1.02;margin:0 0 9px;white-space:nowrap}
+.gs-title-swoosh{width:85%;height:9px;border-top-width:4px;margin:0 auto 13px;transform:rotate(-2deg)}
+.gs-hero-description{font-size:clamp(12px,1.17vw,17px);line-height:1.3;max-width:340px;margin:0 auto 20px;color:#381a15}
+.gs-hero-description span{font-size:24px}
+.gs-hero-benefits{margin:0 auto;max-width:380px;gap:0}
+.gs-hero-benefits>div{gap:5px;padding:2px 6px}
+.gs-hero-benefits .icon{width:31px;height:31px;stroke-width:1.5}
+.gs-hero-benefits span{font-size:clamp(8px,.75vw,11px);text-align:left}
+.gs-hero-product{height:100%;margin:0 -3vw 0 -3vw;align-self:stretch;border-radius:0;mask-image:none;-webkit-mask-image:none;background:#fff3e3;box-shadow:none;z-index:2}
+.gs-hero-product img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:54% 57%;transform:none;filter:none}
+.gs-hero-product::after{background:linear-gradient(90deg,#fff3e3 0%,rgba(255,243,227,.25) 14%,transparent 26%)}
+.gs-hero-ornament{left:-6%;bottom:12px;width:33%;height:82%;border-radius:0 65% 32% 0;transform:rotate(-9deg);border-top:0;background:linear-gradient(135deg,#8c0528,#65031d);z-index:0;overflow:hidden}
+.gs-hero-ornament:after{content:'';position:absolute;left:-50px;top:5%;width:105%;height:63%;border:5px solid #ffd00b;border-top:0;border-left:0;border-radius:0 0 80% 0;transform:rotate(-15deg)}
+.gs-hero-ornament span{font-size:clamp(90px,10vw,160px);top:17%;right:20%;z-index:1;color:#ffcf0a}
+.gs-hero-wave{height:46px;clip-path:none;background:transparent;z-index:6;pointer-events:none}
+.gs-hero-wave:after{display:none}
+@media(min-width:1071px) and (max-width:1320px){
+ .gs-header .gs-header-inner{min-height:55px!important;grid-template-columns:190px minmax(0,1fr) auto!important;gap:7px;width:97%}
+ .gs-header .gs-brand{height:55px}.gs-header .brand-logo{width:177px;height:122px}
+ .gs-header nav a{font-size:10px;padding:7px 8px}
+ .gs-header-actions .gs-cta{font-size:11px;padding:8px 12px;min-height:34px}
+ .gs-header-actions .gs-social{width:26px}.gs-header-wave{height:64px}
+}
+@media(min-width:901px) and (max-width:1070px){
+ .gs-header .gs-header-inner{min-height:52px!important;grid-template-columns:175px minmax(0,1fr) auto!important;gap:4px;width:97%}
+ .gs-header .gs-brand{height:52px}.gs-header .brand-logo{width:163px;height:113px}
+ .gs-header .gs-nav-toggle{display:none!important}
+ .gs-header nav{display:flex!important;position:static!important;grid-column:2!important;grid-row:1!important;flex-direction:row;padding:0!important;background:none;box-shadow:none;gap:0}
+ .gs-header nav a{font-size:9px;padding:7px}
+ .gs-header-actions{grid-column:3}.gs-header-actions .gs-social{display:none}
+ .gs-header-actions .gs-cta{font-size:10px;padding:8px 10px;min-height:32px}
+ .gs-header-wave{height:58px}
+ .gs-hero .gs-hero-grid{height:285px}.gs-hero h1{font-size:36px}.gs-hero-message .gs-overline{font-size:15px}
+ .gs-hero-description{font-size:12px;margin-bottom:18px}.gs-hero-benefits .icon{width:25px;height:25px}.gs-hero-benefits>div{padding:2px 3px}.gs-hero-benefits span{font-size:8px}
+}
+@media(max-width:900px){
+ .gs-header .gs-header-inner{min-height:80px!important;grid-template-columns:minmax(0,1fr) auto auto!important;gap:8px;width:94%}
+ .gs-header .gs-brand{height:80px}.gs-header .brand-logo{position:static;width:135px;height:77px}
+ .gs-header-wave{height:23px}
+ .gs-header .gs-nav-toggle{display:inline-flex!important;align-items:center;justify-content:center;grid-column:3;grid-row:1;width:38px;height:38px;border:1px solid #f0caa0;border-radius:12px;background:#fff5ea}
+ .gs-header nav{display:none!important;position:absolute!important;left:0;right:0;top:80px!important;grid-column:auto!important;grid-row:auto!important;background:#fffaf3;box-shadow:0 13px 24px #54230a23;padding:12px!important;flex-direction:column;gap:2px;align-items:stretch;z-index:99}
+ .gs-header nav.open{display:flex!important}.gs-header nav a{font-size:14px;padding:12px;text-align:center}
+ .gs-header-actions{grid-column:2}.gs-header-actions .gs-social{display:none}
+ .gs-header-actions .gs-cta{font-size:11px;padding:8px 11px;min-height:38px}
+ .gs-hero .gs-hero-grid{width:96%;height:auto;grid-template-columns:38% 62%;grid-template-areas:'portrait message' 'food food';align-items:stretch}
+ .gs-hero-portrait{grid-area:portrait;height:290px}.gs-hero-portrait img{height:300px;width:130%;left:-7%;bottom:0;object-position:bottom center;max-height:none}
+ .gs-hero-message{grid-area:message;padding:30px 10px 25px;align-self:center}
+ .gs-hero-message .gs-overline{font-size:14px}.gs-hero h1{font-size:clamp(29px,5.7vw,46px);letter-spacing:-1px;white-space:normal}
+ .gs-title-swoosh{height:7px;border-top-width:3px;margin-bottom:12px}
+ .gs-hero-description{font-size:13px;max-width:340px;margin-bottom:15px}.gs-hero-benefits{display:flex}.gs-hero-benefits>div{flex:1;gap:5px;padding:2px 5px}.gs-hero-benefits .icon{width:24px;height:24px}.gs-hero-benefits span{font-size:9px}
+ .gs-hero-product{grid-area:food;height:clamp(215px,39vw,290px);margin:0 0 28px;border-radius:20px;align-self:auto;background:#fff3e3}
+ .gs-hero-product img{object-fit:cover;object-position:50% 53%}
+ .gs-hero-product::after{background:linear-gradient(180deg,rgba(255,243,227,.1),transparent 18%)}
+ .gs-hero-ornament{left:-14%;width:52%;height:250px;bottom:auto;top:30px}.gs-hero-ornament span{font-size:100px;right:11%}.gs-hero-wave{height:37px}
+}
+@media(max-width:500px){
+ .gs-header .brand-logo{width:125px}.gs-header-actions .gs-cta{font-size:10px;padding:8px}.gs-header-actions .gs-cta .icon{width:17px;height:17px}
+ .gs-hero-portrait{height:260px}.gs-hero-portrait img{height:270px;width:143%;left:-14%}
+ .gs-hero-message{padding:25px 5px 20px}.gs-hero-message .gs-overline{font-size:11px;letter-spacing:-.2px}.gs-hero h1{font-size:29px}
+ .gs-hero-description{font-size:11px;line-height:1.4;margin-bottom:14px}.gs-hero-description span{font-size:20px}
+ .gs-hero-benefits{gap:0}.gs-hero-benefits>div{padding:2px 3px;gap:3px;flex-direction:column}.gs-hero-benefits .icon{width:22px;height:22px}.gs-hero-benefits span{font-size:8px;text-align:center}
+ .gs-hero-ornament{height:227px;top:25px}.gs-hero-product{height:215px}
+}
+/* A Gil fica à frente da curva do cabeçalho, como na referência. */
+.gs-header{z-index:auto;isolation:auto}
+.gs-header .gs-header-inner{z-index:10}
+.gs-header-wave{z-index:3}
+.gs-hero{isolation:auto}
+.gs-hero .gs-hero-grid{z-index:auto}
+.gs-header .gs-brand{mix-blend-mode:multiply}
+@media(max-width:500px){.gs-hero-portrait img{height:260px;width:117%;left:-7%}.gs-hero-message{padding-left:15px}}
+.gs-hero-wave{width:100%;display:block}
+.gs-header .gs-header-inner{z-index:auto}
+.gs-header .gs-brand{z-index:7}
+.gs-header nav,.gs-header-actions,.gs-header .gs-nav-toggle{position:relative;z-index:10}
+@media(min-width:1071px){.gs-header .brand-logo{width:185px;height:132px}.gs-hero-portrait img{left:11%}}
+@media(min-width:901px) and (max-width:1070px){.gs-hero-portrait img{left:12%}}
+@media(min-width:901px){.gs-hero-portrait img{height:calc(100% - 8px)}}
+@media(min-width:901px) and (max-width:1070px){
+ .gs-hero h1{font-size:44px}.gs-hero-message .gs-overline{font-size:19px}
+ .gs-hero-description{font-size:13px;max-width:300px}
+ .gs-header nav a{font-size:11px;padding:7px 10px}
+ .gs-header-actions{gap:4px}.gs-header-actions .gs-social{display:inline-flex;width:23px;height:28px}
+ .gs-header-actions .gs-social .icon{width:18px;height:18px}
+}
