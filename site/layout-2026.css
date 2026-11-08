@@ -458,3 +458,6 @@ footer .footer-bottom{border-top:1px solid #b45a6a5c;opacity:.9}
 .gs-delicia p{font-size:14px;line-height:1.6;color:var(--gs-chocolate);margin:0 auto;max-width:28ch}
 @media(min-width:701px) and (max-width:1070px){.gs-delicias-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.gs-delicia h3{font-size:28px;min-height:0}.gs-delicia-photo{aspect-ratio:3 / 2}}
 @media(max-width:700px){.gs-delicias{padding-block:15px 28px}.gs-delicias>.gs-section-subtitle{font-size:13px;line-height:1.7;margin:10px auto 20px}.gs-delicias-grid{grid-template-columns:1fr;gap:20px}.gs-delicia{border-radius:23px}.gs-delicia-photo{aspect-ratio:4 / 3}.gs-delicia-info{padding:8px 24px 25px}.gs-delicia h3{font-size:29px;min-height:0}.gs-delicia p{font-size:14px}.gs-delicia-info>.icon{width:32px;height:32px}}
+
+/* Redução proporcional de 20% da vitrine, mantendo o conjunto centralizado. */
+.gs-delicias-grid{width:80%;margin-inline:auto;zoom:.8}
